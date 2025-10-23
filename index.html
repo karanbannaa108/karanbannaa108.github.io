@@ -1,12 +1,94 @@
-<!doctype html>
-<html lang="hi">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>KaranBannaa108 - Free Fire Style Fan Site</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Headshot King | KaranBannaa108</title>
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: #ffffff;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      color: #ff3c00;
+      font-size: 2.8em;
+      margin-top: 40px;
+      text-shadow: 0 0 20px #ff3c00;
+    }
+
+    h2 {
+      color: #00ffff;
+      text-shadow: 0 0 15px #00ffff;
+    }
+
+    p {
+      font-size: 1.2em;
+      color: #ccc;
+    }
+
+    .uid {
+      font-size: 1.3em;
+      color: #ffcc00;
+      text-shadow: 0 0 10px #ffcc00;
+    }
+
+    .like-btn {
+      background: linear-gradient(90deg, #ff3c00, #ff9900);
+      border: none;
+      color: white;
+      padding: 15px 40px;
+      margin-top: 30px;
+      font-size: 1.2em;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 0 15px #ff3c00;
+      transition: 0.3s;
+    }
+
+    .like-btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 25px #ff9900;
+    }
+
+    .count {
+      font-size: 1.5em;
+      margin-top: 15px;
+      color: #00ff99;
+      text-shadow: 0 0 10px #00ff99;
+    }
+
+    footer {
+      margin-top: 60px;
+      color: #555;
+      font-size: 0.9em;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to KaranBannaa108 Arena</h1>
-  <p>This is the personalized Free Fire-style fan website ready for GitHub Pages.</p>
+  <h1>🔥 Headshot King 🔥</h1>
+  <h2>KaranBannaa108 Arena</h2>
+  <p class="uid">Free Fire UID: 825119099</p>
+  <p>Welcome to the dark zone of Free Fire legends 💀</p>
+
+  <button class="like-btn" onclick="addLike()">💖 Like</button>
+  <div class="count" id="likeCount">Likes: 0</div>
+
+  <footer>Made with 💥 by KaranBannaa108</footer>
+
+  <script>
+    let count = localStorage.getItem('likes') || 0;
+    document.getElementById('likeCount').innerText = 'Likes: ' + count;
+
+    function addLike() {
+      count++;
+      localStorage.setItem('likes', count);
+      document.getElementById('likeCount').innerText = 'Likes: ' + count;
+    }
+  </script>
 </body>
 </html>
